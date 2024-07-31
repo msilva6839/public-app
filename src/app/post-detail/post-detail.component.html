@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="container">
+  <h1>Detalles del Post</h1>
+  <div *ngIf="post">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+    <a [routerLink]="['/posts']" class="btn btn-secondary">Volver a la lista</a>
+  </div>
+  <div *ngIf="!post">
+    <p>Cargando...</p>
+  </div>
+</div>
+
+<style>
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    color: #1f2e84; /* reemplazo de var(--bright-blue) */
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    color: #323232; /* reemplazo de var(--gray-900) */
+  }
+
+  p {
+    color: #5c5c5c; /* reemplazo de var(--gray-700) */
+    line-height: 1.6;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .btn-secondary {
+    background-color: #1f2e84; /* reemplazo de var(--bright-blue) */
+    color: white;
+  }
+
+  .btn-secondary:hover {
+    background-color: #0056b3;
+  }
+
+  .btn-secondary:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

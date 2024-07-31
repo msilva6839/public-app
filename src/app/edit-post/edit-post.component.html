@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<div class="container">
+    <h1 class="title">Editar Post</h1>
+    <form (ngSubmit)="updatePost()" class="form">
+      <div class="form-group">
+        <label for="title">Título</label>
+        <input type="text" [(ngModel)]="post.title" name="title" id="title" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="body">Contenido</label>
+        <textarea [(ngModel)]="post.body" name="body" id="body" class="form-control" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Actualizar</button>
+    </form>
+  </div>
+  
+  <style>
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .title {
+      font-size: 2rem;
+      color: #343a40;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  
+    .form-group label {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #495057;
+    }
+  
+    .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ced4da;
+      border-radius: 0.375rem;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+  
+    .form-control:focus {
+      border-color: #80bdff;
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+    }
+  
+    .btn-submit {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      transition: background-color 0.2s, box-shadow 0.2s;
+    }
+  
+    .btn-submit:hover {
+      background-color: #0056b3;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+  
