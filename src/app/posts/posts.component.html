@@ -1,7 +1,8 @@
 <div class="container">
-  <h1 class="my-4 text-center">Lista de Posts</h1>
-  <table class="table table-striped">
-    <thead class="table-primary">
+  <h1 class="align-items-center text-center">Lista de Posts</h1>
+  
+  <table class="table my-5">
+    <thead class="table-light">
       <tr>
         <th>ID</th>
         <th>Título</th>
@@ -14,7 +15,7 @@
         <td>{{ post.id }}</td>
         <td>{{ post.title }}</td>
         <td>{{ post.body }}</td>
-        <td class="btns text-center align-middle">
+        <td class="text-center">
           <div class="d-flex justify-content-center">
             <a [routerLink]="['/posts/', post.id]" class="btn btn-info mx-1">Detalles</a>
             <a [routerLink]="['/posts/edit', post.id]" class="btn btn-warning mx-1">Editar</a>
