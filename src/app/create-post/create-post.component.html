@@ -8,12 +8,14 @@
         </div>
         <div class="mb-3">
             <label for="body" class="form-label">Contenido</label>
-            <textarea [(ngModel)]="post.body" name="body" id="body" class="form-control" required></textarea>
+            <textarea [(ngModel)]="post.body" name="body" id="body" class="form-control" rows="6"
+                style="resize: vertical;width: 100%;" required></textarea>
         </div>
         <div class="mt-5 d-flex justify-content-center gap-3">
             <a routerLink="/" class="btn btn-primary ">Inicio</a>
             <button type="reset" class="btn btn-secondary">Limpiar</button>
             <button type="submit" class="btn btn-success">Guardar</button>
         </div>
+
     </form>
 </div>
