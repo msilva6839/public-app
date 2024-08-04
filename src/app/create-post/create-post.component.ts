@@ -9,12 +9,18 @@ import { ApiService } from '../api.service';
 })
 export class CreatePostComponent {
   post = { title: '', body: '' };
+  
 
   constructor(private apiService: ApiService, private router: Router) { }
 
   savePost(): void {
-    this.apiService.createPost(this.post).subscribe(() => {
-      this.router.navigate(['/posts']);
-    });
+    this.apiService.createPost(this.post).subscribe(
+      (response: any) => {
+        this.router.navigate(['/posts']);
+      },
+      (error: any) => {
+        console.error('Error creating post:', error);
+      }
+    );
   }
 }

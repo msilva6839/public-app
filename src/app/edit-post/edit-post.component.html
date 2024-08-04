@@ -1,14 +1,39 @@
-<div class="container bg-light rounded shadow-sm" style="max-width: 700px;">
-  <h1 class="text-center mb-4">Editar Post</h1>
-  <form (ngSubmit)="updatePost()">
-      <div class="mb-3">
-          <label for="title" class="form-label">Título</label>
-          <input type="text" [(ngModel)]="post.title" name="title" id="title" class="form-control" required>
-      </div>
-      <div class="mb-3">
-          <label for="body" class="form-label">Contenido</label>
-          <textarea [(ngModel)]="post.body" name="body" id="body" class="form-control" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Actualizar</button>
-  </form>
+<!-- Formulario de edición -->
+<div class="container bg-light rounded shadow-sm py-4" style="max-width: 600px;">
+    <h2 class="text-center mb-4">Editar Post</h2>
+
+    <form class="mb-4" (ngSubmit)="updatePost()">
+        <div class="mb-3">
+            <label for="title" class="form-label">Título</label>
+            <input type="text" [(ngModel)]="post.title" name="title" id="title" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="body" class="form-label">Contenido</label>
+            <textarea [(ngModel)]="post.body" name="body" id="body" class="form-control" rows="6"
+                style="resize: vertical;width: 100%;" required></textarea>
+        </div>
+
+        <div class="mt-5 d-flex justify-content-center gap-3">
+            <a routerLink="/posts" class="btn btn-secondary">Regresar</a>
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </div>
+    </form>
+</div>
+
+<!-- Modal de éxito -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Éxito!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                La información se actualizó con éxito.
+                <div class="mt-3">
+                    <a [routerLink]="['/posts']" class="btn btn-primary">Ir al listado</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
