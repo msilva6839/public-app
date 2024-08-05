@@ -1,17 +1,20 @@
-<div class="container bg-light rounded shadow-sm py-4" style="max-width: 600px;">
-    <h2 class="text-center mb-4">Crear Nuevo Post</h2>
+<div class="container" style="max-width: 100vh;">
+    <h2 class="text-center py-4 mb-0">Crear Nuevo Post</h2>
 
-    <form class="mb-4" (ngSubmit)="savePost()">
+    <form class="bg-light rounded shadow-sm p-5" (ngSubmit)="savePost()">
         <div class="mb-3">
             <label for="title" class="form-label">Título</label>
-            <input type="text" [(ngModel)]="post.title" name="title" id="title" class="form-control" required>
+            <div class="col-md-6"> <!-- Ajusta esta clase para cambiar el ancho -->
+                <input type="text" [(ngModel)]="post.title" name="title" id="title" class="form-control" required>
+            </div>
+
         </div>
         <div class="mb-3">
             <label for="body" class="form-label">Contenido</label>
-            <textarea [(ngModel)]="post.body" name="body" id="body" class="form-control" rows="6"
+            <textarea [(ngModel)]="post.body" name="body" id="body" class="form-control" rows="10"
                 style="resize: vertical;width: 100%;" required></textarea>
         </div>
-        <div class="mt-4 d-flex justify-content-between">
+        <div class="mt-5 d-flex justify-content-between">
             <a routerLink="/" class="btn btn-primary">Inicio</a>
             <div>
                 <button type="reset" class="btn btn-secondary me-2">Limpiar</button>

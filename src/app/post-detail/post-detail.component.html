@@ -1,6 +1,6 @@
-<div class="container my-4 py-4 bg-light rounded shadow-sm" style="max-width: 700px;">
-  <h1 class="text-center mb-4">Detalles del Post</h1>
-  <div *ngIf="post">
+<div class="container" style="max-width: 100vh;">
+  <h2 class="text-center py-4 mb-0">Detalles del Post</h2>
+  <div class="bg-light rounded shadow-sm p-5" *ngIf="post">
     <h2 class="mb-3">{{ post.title }}</h2>
     <p class="mb-4">{{ post.body }}</p>
     <a [routerLink]="['/posts']" class="btn btn-secondary">Volver a la lista</a>

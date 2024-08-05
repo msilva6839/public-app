@@ -12,6 +12,8 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { MiModalComponent } from './success-modal/success-modal.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +24,15 @@ import { MiModalComponent } from './success-modal/success-modal.component';
     EditPostComponent,
     PostDetailComponent,
     MiModalComponent
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     NgbModule,
+    NavBarComponent,
+    FooterComponent,
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi(), withJsonpSupport()),
